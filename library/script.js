@@ -1,13 +1,13 @@
 const myLibrary = [
     {
         'author': 'Josh',
-        'title': 'The alien Invasion',
+        'title': 'The Alien Invasion',
         'pages': 255,
         'read': false,
     },
     {
         'author': 'Tope',
-        'title': 'The alonge kingdom',
+        'title': 'The Alonge kingdom',
         'pages': 25500,
         'read': false,
     },
@@ -47,11 +47,14 @@ function displayBooks() {
         console.log(item.author);
         const card = document.createElement('div');
         card.className = 'card';
-        const author = document.createTextNode(item.author);
-        const title = document.createTextNode(item.title);
-        const pageCount = document.createTextNode(`Pages: ${item.pages}`);
-        card.appendChild(author);
+        const authorName = document.createElement('h4');
+        authorName.innerHTML = `<u>Author</u> <br/> <em>${item.author}</em>`
+        const title = document.createElement('h3');
+        title.innerHTML = `<u>Title</u> <br/> <em>${item.title}</em>`
+        const pageCount = document.createElement('h4');
+        pageCount.innerHTML=`<u>Pages: </u><br/> ${item.pages}`;
         card.appendChild(title);
+        card.appendChild(authorName);
         card.appendChild(pageCount);
         cardContainer.appendChild(card);
     })
@@ -64,14 +67,14 @@ function removeBookFromLibrary() {
 // function to display the info on the Library page
 
 // Handle inputs for book details
-const title = document.getElementById('title');
-const pages = document.getElementById('pages');
-let readBook = false;
-// const readBook = document.getElementById('readBook')
-const addsBookButton = document.getElementById('newBook')
+// const title = document.getElementById('title');
+// const pages = document.getElementById('pages');
+// let readBook = false;
+// // const readBook = document.getElementById('readBook')
+// const addsBookButton = document.getElementById('newBook')
 
-console.log(title.value);
-console.log(pages.value);
+// console.log(title.value);
+// console.log(pages.value);
 
 
 // Check for click on Add New Book

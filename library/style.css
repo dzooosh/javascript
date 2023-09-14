@@ -21,18 +21,32 @@ header>h5 {
 }
 
 main {
-    margin: 0 auto;
+    margin: 0px;
 
+}
+.newbook {
+    display:flex;
+}
+#newBook {
+    margin: 10px auto;
+    justify-content: center;
+    height: 40px;
+    width: 150px;
+    font-size: large;
+    background-color: #e3d5ca;
+    cursor: pointer;
 }
 
 .card {
-    height: 250px;
+    padding: 10px;
+    height: 280px;
     width: 200px;
     background-color: #d5bdaf;
     border: 1px solid #d6ccc2;
-    border-radius: 2px;
+    border-radius: 5px;
     margin: 10px;
     text-align: center;
+    box-shadow: 2px 2px 7px #4f3923;
 }
 
 .cards-container {
