@@ -5,8 +5,13 @@ const myLibrary = [
         'pages': 255,
         'read': false,
     },
-
-];
+    {
+        'author': 'Tope',
+        'title': 'The alonge kingdom',
+        'pages': 25500,
+        'read': false,
+    },
+];``
 
 // Book object
 function Book(author, title, pages, readBook=false) {
@@ -29,7 +34,7 @@ function addBookToLibrary(author, title, pages, readBook) {
         }
     })
 }
-
+const cardContainer = document.querySelector('.cards-container');
 // display the books present in cards
 function displayBooks() {
     console.log(myLibrary)
@@ -39,15 +44,16 @@ function displayBooks() {
     }
     // loop through library array and create cards for each element
     myLibrary.forEach((item) => {
+        console.log(item.author);
         const card = document.createElement('div');
         card.className = 'card';
         const author = document.createTextNode(item.author);
         const title = document.createTextNode(item.title);
         const pageCount = document.createTextNode(`Pages: ${item.pages}`);
-        card.appendChild(author)
-        card.appendChild(title)
-        card.appendChild(pageCount)
-
+        card.appendChild(author);
+        card.appendChild(title);
+        card.appendChild(pageCount);
+        cardContainer.appendChild(card);
     })
 }
 
