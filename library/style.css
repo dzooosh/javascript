@@ -53,3 +53,37 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
+
+label {
+    padding: 6px 12px 12px 0;
+    display: block;
+}
+
+dialog h4 {
+    margin: 5px;
+}
+dialog span {
+    float: right;
+    cursor: pointer;
+    font-size:24px;
+    color: #b49b8f;
+}
+dialog>span:hover {
+    color: #69300f;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(2px);
+}
+
+#new-book-form {
+    text-align: center;
+    background-color: #f1efed;
+    border-color: #e5e4e3;
+    border-radius: 5%;
+} 
+
+#new-book-form button {
+    margin-top: 10px;
+
+}

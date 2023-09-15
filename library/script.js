@@ -11,7 +11,7 @@ const myLibrary = [
         'pages': 25500,
         'read': false,
     },
-];``
+];
 
 // Book object
 function Book(author, title, pages, readBook=false) {
@@ -60,9 +60,23 @@ function displayBooks() {
     })
 }
 
+const bookForm = document.getElementById("new-book-form");
+const newBookBtn = document.getElementById("newBook");
+const cancel = document.getElementsByTagName('span')[0];
+
+newBookBtn.addEventListener('click', () => {
+    bookForm.showModal();
+});
+
+cancel.addEventListener('click', () => {
+    bookForm.close();
+})
+
 // function to remove book
 function removeBookFromLibrary() {
 }
+
+
 
 // function to display the info on the Library page
 

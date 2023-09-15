@@ -18,7 +18,25 @@
         <div class="newbook">
             <button id="newBook">+ NEW BOOK</button>
         </div>
-    
+
+        <!-- Add New Book Form -->
+        <dialog id="new-book-form">
+            <span>&times;</span>
+            <h4>ADD NEW BOOK</h4>
+            <form>
+                <label for="title">Title</label>
+                <input type="text" id="title" maxlength="30" required>
+                <label for="author">Author</label>
+                <input type="text" id="author" maxlength="30" required>
+                <label for="pages">Pages</label>
+                <input type="number" id="pages" min="5" max="500000" required>
+                <div>
+                    <button id="addBook">Submit</button>
+                </div>
+            </form>
+        </dialog>
+
+        <!-- Cards with book details -->
         <div class="cards-container"></div>
     </main>
 
